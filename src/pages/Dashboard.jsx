@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-    FaPlane, FaPlus, FaSearch, FaHistory, 
-    FaGlobe, FaChartBar, FaCalendarAlt, FaSuitcase 
+import { useEffect, useState } from 'react';
+import {
+    FaGlobe,
+    FaHistory,
+    FaPlane, FaPlus, FaSearch,
+    FaSuitcase
 } from 'react-icons/fa';
-import { itinerariesAPI } from '../services/api';
+import { Link } from 'react-router-dom';
 import ItineraryCard from '../components/ItineraryCard';
 import Loader from '../components/Loader';
+import { itinerariesAPI } from '../services/api';
 
 const Dashboard = () => {
     const [itineraries, setItineraries] = useState([]);
@@ -169,7 +171,7 @@ const Dashboard = () => {
                             className="form-control"
                             style={styles.searchInput}
                             value={searchQuery}
-                            onChange={(e) => handleShareToggle(e) && false /* dummy */ || handleSearchAndFilter(e.target.value, typeFilter)}
+                            onChange={(e) =>handleSearchAndFilter(e.target.value, typeFilter)}
                         />
                     </div>
 
