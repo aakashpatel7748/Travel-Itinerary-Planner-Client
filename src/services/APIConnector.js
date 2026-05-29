@@ -9,10 +9,14 @@ export const apiConnector = (method, url, bodyData, headers, params) => {
         mergedHeaders.Authorization = `Bearer ${token}`;
     }
 
+    // GET requests should not have a request body (payload)
+    const isGet = method.toUpperCase() === 'GET';
+    const requestData = isGet ? null : (bodyData ? bodyData : null);
+
     return axiosInstance({
         method: `${method}`,
         url: `${url}`,
-        data: bodyData ? bodyData : null,
+        data: requestData,
         headers: Object.keys(mergedHeaders).length > 0 ? mergedHeaders : null,
         params: params ? params : null,
         withCredentials: true
