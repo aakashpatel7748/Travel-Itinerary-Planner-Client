@@ -18,14 +18,14 @@ const Navbar = () => {
         {/* Brand Logo */}
         <Link to="/" className="navbar-brand d-flex align-items-center gap-2 m-0" style={styles.logo}>
           <FaPlane style={styles.logoIcon} />
-          <span className="logo-text">Orbitra Travel AI</span>
+          <span className="logo-text d-none d-sm-inline">Orbitra Travel AI</span>
         </Link>
 
         {user ? (
-          <div className="d-flex align-items-center gap-3">
+          <div className="d-flex align-items-center gap-2 gap-sm-3">
             {/* Quick Actions for Logged In User */}
-            <Link to="/create-itinerary" className="btn btn-primary btn-sm d-none d-md-flex align-items-center gap-2 px-3 py-2" style={styles.actionBtn}>
-              <FaPlus size={12} /> Create Itinerary
+            <Link to="/create-itinerary" className="btn btn-primary btn-sm d-flex align-items-center gap-2 px-3 py-2" style={styles.actionBtn}>
+              <FaPlus size={12} /> <span className="d-none d-sm-inline">Create Itinerary</span>
             </Link>
 
             {/* Profile Badge */}

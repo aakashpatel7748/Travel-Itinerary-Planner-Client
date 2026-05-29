@@ -119,18 +119,18 @@ const Dashboard = () => {
                         <h2 style={styles.title} className="m-0">Trip Planning Board</h2>
                         <p style={styles.subtitle} className="m-0">Automatically generate your day-to-day vacation schedules with AI</p>
                     </div>
-                    <Link to="/create-itinerary" className="btn btn-primary d-flex align-items-center gap-2 px-4 py-2.5" style={styles.headerBtn}>
+                    <Link to="/create-itinerary" className="btn btn-primary d-flex align-items-center gap-2 px-4 py-2.5 align-self-start align-self-md-center" style={styles.headerBtn}>
                         <FaPlus size={13} /> New Itinerary Wizard
                     </Link>
                 </div>
 
                 {/* Dashboard Stats */}
-                <div className="row g-4 mb-5">
+                <div className="row g-3 g-md-4 mb-5">
                     <div className="col-12 col-sm-4">
-                        <div style={styles.statCard} className="d-flex align-items-center gap-4">
+                        <div style={styles.statCard} className="d-flex align-items-center gap-3 gap-md-4 p-3 p-md-4">
                             <div style={{ ...styles.statIconWrapper, background: 'rgba(59, 130, 246, 0.12)', color: '#3b82f6' }}>
                                 <FaSuitcase size={22} />
-                            </div>
+                             </div>
                             <div>
                                 <h3 style={styles.statVal}>{stats.total}</h3>
                                 <span style={styles.statLabel}>Vacations Planned</span>
@@ -138,7 +138,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="col-12 col-sm-4">
-                        <div style={styles.statCard} className="d-flex align-items-center gap-4">
+                        <div style={styles.statCard} className="d-flex align-items-center gap-3 gap-md-4 p-3 p-md-4">
                             <div style={{ ...styles.statIconWrapper, background: 'rgba(16, 185, 129, 0.12)', color: '#10b981' }}>
                                 <FaGlobe size={20} />
                             </div>
@@ -149,7 +149,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="col-12 col-sm-4">
-                        <div style={styles.statCard} className="d-flex align-items-center gap-4">
+                        <div style={styles.statCard} className="d-flex align-items-center gap-3 gap-md-4 p-3 p-md-4">
                             <div style={{ ...styles.statIconWrapper, background: 'rgba(139, 92, 246, 0.12)', color: '#8b5cf6' }}>
                                 <FaPlane size={20} style={{ transform: 'rotate(-45deg)' }} />
                             </div>
@@ -249,7 +249,6 @@ const styles = {
         backgroundColor: 'rgba(255, 255, 255, 0.02)',
         border: '1px solid rgba(255, 255, 255, 0.06)',
         borderRadius: '20px',
-        padding: '24px',
         boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
     },
     statIconWrapper: {
@@ -280,6 +279,7 @@ const styles = {
         borderRadius: '16px'
     },
     searchContainer: {
+        width: '100%',
         maxWidth: '400px'
     },
     searchIcon: {

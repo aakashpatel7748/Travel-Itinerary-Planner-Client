@@ -96,7 +96,7 @@ const ItineraryDetailsPage = () => {
                         <FaArrowLeft size={11} /> Back to Planner Board
                     </Link>
 
-                    <div className="d-flex gap-2">
+                    <div className="d-flex gap-2 align-self-end align-self-sm-center">
                         {/* Share Toggle Button */}
                         <button
                             onClick={handleToggleShare}
